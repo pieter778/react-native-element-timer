@@ -45,13 +45,13 @@ const TimerComponent = React.forwardRef<any, TimerProps>((props, ref) => {
   const timer = useCallback(() => {
     interval = BackgroundTimer.setInterval(() => {
       currentSeconds = currentSeconds + 1;
-      if (seconds < 60) {
+      if (seconds < 59) {
         seconds = seconds + 1;
       } else {
         seconds = 0;
         minute = minute + 1;
       }
-      if (minute === 60) {
+      if (minute === 59) {
         minute = 0;
         hours = hours + 1;
       }
